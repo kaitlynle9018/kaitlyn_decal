@@ -13,7 +13,7 @@
 # 7) Let's say you call "git add" in your current working directory and then "git status". What message would appear? What is it telling you?
 # "git status" shows the status of the repository, including which files have been modified, which files have been staged, which branch we're on and if it's up to date, and if there are untracked files.
 # 8) What has been the most frustrating error or bug you've encountered in this class so far? How did you troubleshoot and resolve it?
-# Connecting my GitHub repository to my local one. I had to debug it by making a new SSH key and restarting the entire process over again because I had connected my GitHub repository to the wrong folder.
+# Connecting my GitHub repository to my local one. I had to debug it by restarting the entire process of connecting my local to remote repository over again because I had connected my GitHub repository to the wrong folder.
 # 9) How does cloning a repository differ from pulling from a repository?
 # Cloning a repository creates a local copy on our computers while pulling from the repository gets the latest changes.
 # 10) Tell me a fun fact!
