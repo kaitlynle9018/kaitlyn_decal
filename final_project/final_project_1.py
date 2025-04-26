@@ -15,13 +15,27 @@ koi = koi[['pl_name', 'pl_orbper', 'pl_bmasse', 'pl_rade']].dropna()
 koi.columns = ['Name', 'Period', 'Mass', 'Radius']
 
 # Plot 1: Mass vs period 
-plt.figure(figsize=(8, 5))
-plt.scatter(koi['Period'], koi['Mass'], alpha=0.5, color='teal')
+koi_filtered = koi[(koi['Mass'] > 1) & (koi['Mass'] < 100) & (koi['Period'] > 0)]
+#plt.figure(figsize=(8, 5))
+#plt.scatter(koi_filtered['Period'], koi_filtered['Mass'], alpha=0.5, color='teal')
+#plt.xlabel('Orbital Period (days)')
+#plt.ylabel('Mass (Earth Masses)')
+#plt.title('KOI Planets: Mass vs Period')
+#plt.grid(True)
+#plt.show()
+plt.figure(figsize=(10, 6))
+plt.scatter(koi_filtered['Period'], koi_filtered['Mass'], alpha=0.5, label='Filtered KOI Data', color='gray')
+
+plt.xscale('log')
+plt.yscale('log')
+
 plt.xlabel('Orbital Period (days)')
 plt.ylabel('Mass (Earth Masses)')
 plt.title('KOI Planets: Mass vs Period')
-plt.grid(True)
+plt.legend()
+plt.grid(True, which='both')
 plt.show()
+
 
 # Plot 2: Period vs Radius (log scale) 
 plt.figure(figsize=(8, 5))
